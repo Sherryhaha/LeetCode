@@ -13,6 +13,8 @@ class LeetCode{
 public:
     vector<int> twoSum(vector<int>& nums, int target);
     string longestPalindrome(string s);
+    int maxSubArray(vector<int>& nums);
+    int uniquePaths(int m, int n);
 };
 
 #endif //LEETCODE_LEETCODE_H
