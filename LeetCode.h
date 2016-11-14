@@ -15,6 +15,7 @@ public:
     string longestPalindrome(string s);
     int maxSubArray(vector<int>& nums);
     int uniquePaths(int m, int n);
+    int searchInsert(vector<int>& nums, int target);
 };
 
 #endif //LEETCODE_LEETCODE_H
