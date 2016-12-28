@@ -17,6 +17,7 @@ public:
     int uniquePaths(int m, int n);
     int searchInsert(vector<int>& nums, int target);
     int search(vector<int>& nums, int target);
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid);
 };
 
 #endif //LEETCODE_LEETCODE_H
