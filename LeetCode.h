@@ -20,6 +20,8 @@ public:
     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid);
     int minPathSum(vector<vector<int>>& grid);
     int climbStairs(int n);
+    int numTrees(int n);
+    int minimumTotal(vector<vector<int>>& triangle);
 };
 
 #endif //LEETCODE_LEETCODE_H
