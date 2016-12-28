@@ -18,6 +18,8 @@ public:
     int searchInsert(vector<int>& nums, int target);
     int search(vector<int>& nums, int target);
     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid);
+    int minPathSum(vector<vector<int>>& grid);
+    int climbStairs(int n);
 };
 
 #endif //LEETCODE_LEETCODE_H
