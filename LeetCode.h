@@ -22,6 +22,11 @@ public:
     int climbStairs(int n);
     int numTrees(int n);
     int minimumTotal(vector<vector<int>>& triangle);
-};
+    int maxProfit(vector<int>& prices);
+    int maxProfit_2(vector<int>& prices);
+    int maxProfit_3(vector<int>& prices);
+    int maxProfit(int k, vector<int>& prices);
+
+    };
 
 #endif //LEETCODE_LEETCODE_H
