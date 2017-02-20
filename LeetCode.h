@@ -26,6 +26,7 @@ public:
     int maxProfit_2(vector<int>& prices);
     int maxProfit_3(vector<int>& prices);
     int maxProfit(int k, vector<int>& prices);
+    int numDecodings(string s);
 
     };
 

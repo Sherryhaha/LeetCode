@@ -90,6 +90,32 @@ string LeetCode::longestPalindrome(string s) {
 //    return ss;
 //}
 
+
+//**********************************************************
+//最长回文子串问题,用的是简洁版的方案，与之前繁琐的方案有所区别  (2017/2/20更新)
+//**********************************************************
+
+string longestPalindrome_simple(string s) {
+    if (s.size() < 2) {
+        return s;
+    }
+    int len = s.size(), maxlen = 1, maxleft = 0, right, left;
+    for (int start = 0; start < len && len - start > maxlen / 2;) {
+        left = right = start;
+        while (right < len - 1 && s[right] == s[right + 1]) right++;   //跳过重复的字符
+        start = right + 1;
+        while (right < len - 1 && s[left - 1] == s[right + 1]) {    //expand
+            right++;
+            left--;
+        }
+        if (right - left + 1 > maxlen) {
+            maxleft = left;
+            maxlen = right - left + 1;
+        }
+    }
+    return s.substr(maxleft, maxlen);
+}
+
 int main() {
     LeetCode l;
     string r;
