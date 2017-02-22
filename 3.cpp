@@ -39,10 +39,38 @@ int lengthOfLongestSubstring(string s) {
 
 }
 
+int lengthOfLongestSubstring_sun(string s) {
+    vector<int> dict(256, -1);
+    int maxLen = 0, start = -1;
+    for (int i = 0; i != s.length(); i++) {
+        if (dict[s[i]] > start)
+            start = dict[s[i]];
+        dict[s[i]] = i;
+        maxLen = max(maxLen, i - start);
+    }
+    return maxLen;
+}
+
+//O(n)解法
+// i-m+1算出的是以i结尾，不重复的子串长度，意思就是前面m个字符跟后面的i-m+1个字符中有重复的
+int lengthOfLongestSubstring_simple(string s) {
+    // for ASCII char sequence, use this as a hashmap
+    vector<int> charIndex(256, -1);
+    int longest = 0, m = 0;
+
+    for (int i = 0; i < s.length(); i++) {
+        m = max(charIndex[s[i]] + 1, m);    // automatically takes care of -1 case
+        charIndex[s[i]] = i;
+        longest = max(longest, i - m + 1);
+    }
+
+    return longest;
+}
+
 int main() {
     string s = "dvdf";
 
-    int result = lengthOfLongestSubstring(s);
+    int result = lengthOfLongestSubstring_simple(s);
 
     cout << result << endl;
     return 0;
