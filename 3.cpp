@@ -51,10 +51,14 @@ int lengthOfLongestSubstring_sun(string s) {
     return maxLen;
 }
 
-//O(n)解法
+// O(n)解法
 // i-m+1算出的是以i结尾，不重复的子串长度，意思就是前面m个字符跟后面的i-m+1个字符中有重复的
+// 假设L[i] = s[m...i]是以s[i]结尾的无重复字符的最长子串，我们用一个hashmap记录m~i的每一个字符
+// 记录<字符，index>在hashmap中.接着去寻找s[i+1]，如果s[i+1]没有在hashmap中出现，就直接将它加到hashmap中
+// L[i+1] = s[m...i+1]，如果s[i+1]在hashmap中出现了，并且哈希值(index)是k，让m = max(m,k)，然后让L[i+1] = s[m...i+1]，
+// 并且需要更新hashmap中的条目以标记最新出现的s[i+1]。
 int lengthOfLongestSubstring_simple(string s) {
-    // for ASCII char sequence, use this as a hashmap
+    // for ASCII char seque nce, use this as a hashmap
     vector<int> charIndex(256, -1);
     int longest = 0, m = 0;
 
