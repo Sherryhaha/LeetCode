@@ -15,6 +15,7 @@ double findkth(vector<int> &nums1, int s1, vector<int> &nums2, int s2, int k) {
         int pa = min (k / 2, m);
         int pb = k - pa;
         if (nums1[s1 + pa - 1] < nums2[s2 + pb - 1]) {
+//            return findkth(nums1, s1 + pa, nums2, s2, k - pa);
             return findkth(nums1, s1 + pa, nums2, s2, k - pa);
         } else if (nums1[s1 + pa - 1] > nums2[s2 + pb - 1]) {
             return findkth(nums1, s1, nums2, s2 + pb, k - pb);
