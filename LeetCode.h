@@ -8,6 +8,8 @@
 #include <vector>
 #include <string>
 #include <math.h>
+#include <map>
+#include <unordered_map>  //头文件
 
 using namespace std;
 class LeetCode{
