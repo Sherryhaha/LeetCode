@@ -1,6 +1,6 @@
 //
 // Created by sunguoyan on 2017/4/17.
-//
+// 3sum
 #include "LeetCode.h"
 int threeSumClosest(vector<int>& nums, int target) {
     if(nums.size() < 3){
