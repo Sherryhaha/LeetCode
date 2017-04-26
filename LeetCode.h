@@ -6,6 +6,7 @@
 #define LEETCODE_LEETCODE_H
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <string>
 #include <math.h>
 #include <map>
