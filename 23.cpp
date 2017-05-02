@@ -1,6 +1,6 @@
 //
 // Created by sunguoyan on 2017/4/26.
-//
+// 将k个有序链表合并，用到了优先队列priority_queue
 #include "LeetCode.h"
 
 struct ListNode {
