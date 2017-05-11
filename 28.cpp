@@ -15,8 +15,6 @@ int strStr(string haystack, string needle) {
     if(len_needle==0){
         return 0;
     }
-   // bool flag = false;
-  //  int result;
     for(int i = 0;i<len_hay-len_needle+1;i++){
         if(haystack[i] == needle[0]) {
             int j;
@@ -31,7 +29,6 @@ int strStr(string haystack, string needle) {
                 }
             }
             if(j==len_needle){
-               // flag = true;
                 return i;
             }
         }
